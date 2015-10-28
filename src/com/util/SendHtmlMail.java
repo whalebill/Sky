@@ -21,8 +21,8 @@ public class SendHtmlMail {
 			email.addTo(toEmail);
 
 			email.setFrom("tianrenemail@sina.com");
-			email.setSubject("天仁电影"); // 标题
-			email.setMsg("订票信息");
+			email.setSubject("Sky Movie"); // Title
+			email.setMsg("Ticket Order Info");
 
 			URL url = new URL(
 					"http://localhost:8888/TianRen/uploadAd/31049534581071.gif");

@@ -17,7 +17,7 @@ public class FileProcessUitl {
 		try {
 			StringBuffer file_location = new StringBuffer();
 			
-			//获取保存到 tomcat 服务器上的绝对路径
+			//get absolute path on tomcat
 			ServletContext context = ServletActionContext.getServletContext();
 			
 			for( int i = 0 ; i < file.length ; i++) {
@@ -27,10 +27,10 @@ public class FileProcessUitl {
 				
 				String GenericFileName=System.nanoTime()+extName;
 				
-				//获取保存到数据库的相对路径字符串 . 类似于 : /项目名/upload/xxx.jpg
+				//get relative path in database: /project/upload/xxx.jpg
 				String location = ServletActionContext.getRequest().getContextPath()+path+"/"+GenericFileName;
 				
-				//上传文件
+				//upload file
 				File target = new File( targetDirectory , GenericFileName );
 				
 				FileUtils.copyFile(file[i], target);

@@ -15,12 +15,12 @@ public class close extends ActionSupport {
 				.getApplication();
 		if (session.get("curMember") != null) {
 			List<Member> onlineMemberList = (List<Member>) application.get("onlineMemberList");
-			// 在线列表移除
+			// online list remove
 			onlineMemberList.remove(session.get("curMember"));			
 		}
 		if (session.get("curAdmin") != null) {
 			List<Admin> onlineAdminList = (List<Admin>) application.get("onlineAdminList");
-			// 在线列表移除
+			// online list remove
 			onlineAdminList.remove(session.get("curAdmin"));
 		}
 		session.clear();
